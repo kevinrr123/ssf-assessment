@@ -36,7 +36,7 @@
                 <div class="card" th:each="article :${articles}">
                     <label class="form-label">Articles</label>
                     <p>
-                    <span data-th-text="${article.id}"></span>
+                    <span th:text="${article.id}"></span>
                     </p>
                     <span data-th-text="${article.published_on}"></span>
                     </p>
