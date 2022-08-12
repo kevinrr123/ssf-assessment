@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/js/bootstrap.min.js" 
+    integrity="sha512-EKWWs1ZcA2ZY9lbLISPz8aGR2+L7JVYqBAYTq5AXgBkSjRSuQEGqWx8R1zAX16KdXPaCjOCaKE8MCpU0wcHlHA==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" 
+    integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- MDB -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.3.0/mdb.min.css"
+      rel="stylesheet"
+    />
+    <title>Crypto Articles</title>
+</head>
+<body>
+      <h1>Crypto News of the Day</h1>
+      <form action="#" method="POST">
+        <input type="submit" value="save">
+                <div class="card" th:each="article :${articles}">
+                    <label class="form-label">Articles</label>
+                    <p>
+                    <span data-th-text="${article.id}"></span>
+                    </p>
+                    <span data-th-text="${article.published_on}"></span>
+                    </p>
+                    </p>
+                    <span data-th-text="${article.title}"></span>
+                    </p>
+                    </p>
+                    <span data-th-text="${article.url}"></span>
+                    </p>
+                    </p>
+                    <span data-th-text="${article.imageurl}"></span>
+                    </p>
+                    </p>
+                    <span data-th-text="${article.body}"></span>
+                    </p>
+                    </p>
+                    <span data-th-text="${article.tags}"></span>
+                    </p>
+                    </p>
+                    <span data-th-text="${article.categories}"></span>
+                    </p>
+                    <br />
+                    <input type="checkbox" value="save">
+                  </div>
+                </form>
+
+</body>
+</html>
