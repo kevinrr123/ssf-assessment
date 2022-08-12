@@ -53,8 +53,8 @@ public class NewsService {
         response = template.exchange(request, String.class);
         List<Articles> listArti = new ArrayList<>();
 
-        try (InputStream is = new ByteArrayInputStream(response.getBody().getBytes());){
-        
+        try {
+        InputStream is = new ByteArrayInputStream(response.getBody().getBytes());
         // Reader reader = new StringReader(payload);
         JsonReader reader = Json.createReader(is);
         JsonObject data = reader.readObject();
