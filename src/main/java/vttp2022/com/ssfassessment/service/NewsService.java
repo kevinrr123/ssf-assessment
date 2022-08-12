@@ -36,15 +36,12 @@ public class NewsService {
     
     String mainURL = "https://min-api.cryptocompare.com/data/v2/news";
 
-    //@Value("${API_NEW_KEY}")
-    //private String apiKey;
-    //String apiKey = System.getenv("API_NEW_KEY");
 
-    String apiKey = "286a8647615acb653ace991593e8597f338f921e93ccb3814ef538da35b6b3df";
+    String apiKey = System.getenv("API_NEW_KEY");
 
     public List<Articles> getArticles() {
 
-        String url = UriComponentsBuilder.fromUriString(mainURL).queryParam("api_key", apiKey)
+        String url = UriComponentsBuilder.fromUriString(mainURL).queryParam("API_NEW_KEY", apiKey)
                             .toUriString();
         
 

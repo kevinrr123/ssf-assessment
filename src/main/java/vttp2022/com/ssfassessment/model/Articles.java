@@ -10,9 +10,6 @@ public class Articles {
     public String tags;
     public String categories;
     
-    public Articles() {
-        this.id = id;
-    }
     public String getId() {
         return id;
     }
